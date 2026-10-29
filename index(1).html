@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1F3B2D">
+  <title>Sea Breeze Coffee | Vladivostok Sea View Cafe</title>
+  <meta name="description" content="Sea Breeze Coffee — кофейня в центре Владивостока с видом на море, свежей обжаркой кофе, выпечкой и быстрым Wi-Fi. Забронируйте место онлайн.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sea Breeze Coffee | Кофе с видом на море">
+  <meta property="og:description" content="Спешелти-кофе, морская соль в латте и свежая выпечка у воды во Владивостоке.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=85">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#1F3B2D;--cream:#F6F1EA;--pink:#E8C9C1;--ink:#18251e;--muted:#68736b;--line:rgba(31,59,45,.18);--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--cream);color:var(--green);font-family:"Manrope",Arial,sans-serif;font-size:16px;line-height:1.55}
+    img{display:block;max-width:100%;object-fit:cover}
+    a{color:inherit;text-decoration:none}
+    button,input,select{font:inherit}
+    button,a,input,select{touch-action:manipulation}
+    :focus-visible{outline:3px solid #b56c59;outline-offset:3px}
+    .wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(246,241,234,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.04em;white-space:nowrap}
+    .brand-mark{width:34px;height:34px;border:1.5px solid var(--green);border-radius:50%;display:grid;place-items:center;font-size:12px;letter-spacing:-.08em}
+    .brand-name{font-size:15px;line-height:1.05}
+    .brand-name small{display:block;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-top:5px}
+    .nav-links{display:none;gap:22px;font-size:13px;font-weight:700}
+    .nav-links a:hover{opacity:.65}
+    .nav-cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;background:var(--green);color:var(--cream);border-radius:3px;font-size:12px;font-weight:800}
+    .hero{padding:28px 0 56px}
+    .hero-grid{display:grid;gap:24px}
+    .eyebrow{display:flex;align-items:center;gap:9px;text-transform:uppercase;font-size:11px;font-weight:800;letter-spacing:.16em}
+    .eyebrow:before{content:"";width:24px;height:1px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,.display{font-family:"Dela Gothic One",Impact,sans-serif;font-weight:400;letter-spacing:-.045em}
+    h1{font-size:clamp(2.65rem,12vw,5.8rem);line-height:.99;margin:22px 0 20px;max-width:780px}
+    .split-line{display:block;overflow:hidden}
+    .hero-copy{font-size:17px;max-width:490px;color:#43564a}
+    .hero-actions{display:flex;flex-direction:column;align-items:stretch;gap:10px;margin:26px 0 20px}
+    .btn{min-height:50px;padding:13px 18px;display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid var(--green);border-radius:3px;font-weight:800;font-size:14px;transition:transform .2s,background .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--green);color:var(--cream)}
+    .btn-secondary{background:transparent}
+    .fineprint{font-size:12px;color:var(--muted)}
+    .hero-visual{position:relative;min-height:360px;overflow:hidden;background:#d9d3c8}
+    .hero-visual img{position:absolute;inset:0;width:100%;height:100%;object-position:center}
+    .image-label{position:absolute;left:14px;bottom:14px;background:var(--cream);padding:12px 14px;max-width:235px;font-size:12px;font-weight:800}
+    .image-label span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:600;margin-bottom:3px}
+    .hero-stamp{position:absolute;right:14px;top:14px;background:var(--pink);width:82px;height:82px;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:10px;line-height:1.2;font-weight:800;transform:rotate(8deg)}
+    .ticker{background:var(--green);color:var(--cream);padding:13px 0;overflow:hidden}
+    .ticker-inner{display:flex;justify-content:space-between;gap:18px;white-space:nowrap;font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:800}
+    .ticker span:after{content:"✳";color:var(--pink);margin-left:18px}
+    section{padding:66px 0}
+    .section-head{display:grid;gap:14px;margin-bottom:28px}
+    .section-head h2{font-size:clamp(2rem,8vw,3.8rem);line-height:1.04;margin:10px 0 0}
+    .section-head p{max-width:470px;color:#526158;margin:0}
+    .menu-grid{display:grid;gap:12px}
+    .menu-item{display:grid;grid-template-columns:1fr auto;gap:14px;padding:20px 0;border-top:1px solid var(--line)}
+    .menu-item h3{font-size:18px;margin:0 0 5px;letter-spacing:-.03em}
+    .menu-item p{font-size:14px;color:var(--muted);margin:0;max-width:420px}
+    .price{font-size:15px;font-weight:800;white-space:nowrap}
+    .menu-photo{height:250px;position:relative;overflow:hidden;margin-top:16px}
+    .menu-photo img{width:100%;height:100%}
+    .photo-note{position:absolute;bottom:12px;left:12px;background:var(--pink);padding:9px 12px;font-size:12px;font-weight:800}
+    .features{background:#e9e3da}
+    .feature-grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+    .feature{background:#e9e3da;padding:23px;min-height:180px}
+    .feature-number{font-size:11px;letter-spacing:.12em;font-weight:800;color:#9a6c60}
+    .feature h3{font-size:19px;margin:23px 0 8px;letter-spacing:-.03em}
+    .feature p{font-size:14px;color:#59665d;margin:0}
+    .ratings-grid{display:grid;gap:14px}
+    .rating-note{padding:25px;background:var(--pink);display:flex;flex-direction:column;justify-content:space-between;min-height:220px}
+    .rating-note strong{font-family:"Dela Gothic One",sans-serif;font-size:42px;font-weight:400;line-height:1}
+    .rating-note p{margin:18px 0 0;font-size:13px}
+    .quote{padding:25px;border:1px solid var(--line);min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
+    .quote blockquote{font-size:18px;line-height:1.45;margin:0 0 25px;font-weight:600}
+    .quote cite{font-size:12px;font-style:normal;color:var(--muted)}
+    .pain-grid{display:grid;gap:12px}
+    .pain{padding:22px;background:var(--white);border-left:3px solid var(--pink)}
+    .pain h3{font-size:17px;margin:0 0 7px}
+    .pain p{font-size:14px;color:var(--muted);margin:0}
+    .pain .answer{display:block;color:var(--green);font-weight:700;margin-top:12px}
+    .steps{display:grid;gap:0;border-top:1px solid var(--line)}
+    .step{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}
+    .step-no{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--green);border-radius:50%;font-size:12px;font-weight:800}
+    .step h3{margin:0 0 5px;font-size:17px}
+    .step p{margin:0;color:var(--muted);font-size:14px}
+    .booking{background:var(--green);color:var(--cream)}
+    .booking-grid{display:grid;gap:32px}
+    .booking h2{font-size:clamp(2.1rem,8vw,4.3rem);line-height:1.02;margin:14px 0 18px}
+    .booking-copy{color:#d8e0d8;max-width:450px}
+    .booking-benefits{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+    .booking-benefits span{border:1px solid rgba(246,241,234,.35);padding:8px 11px;font-size:12px}
+    .form-panel{background:var(--cream);color:var(--green);padding:22px}
+    .form-panel h3{font-size:21px;margin:0 0 5px}
+    .form-panel>p{font-size:13px;color:var(--muted);margin-bottom:22px}
+    .field{display:grid;gap:7px;margin-bottom:15px}
+    .field label{font-size:13px;font-weight:800}
+    .field input,.field select{width:100%;min-height:48px;border:1px solid #c9cec7;background:#fff;padding:11px 12px;border-radius:2px;color:var(--ink)}
+    .consent{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start;font-size:12px;color:#59665d;margin:17px 0}
+    .consent input{width:18px;height:18px;margin:2px 0;accent-color:var(--green)}
+    .consent a{text-decoration:underline;text-underline-offset:3px}
+    .form-panel .btn{width:100%;cursor:pointer}
+    .form-message{display:none;margin-top:15px;padding:12px;background:#dce8db;font-size:14px;font-weight:700}
+    .form-message.show{display:block}
+    .faq-list{border-top:1px solid var(--line)}
+    details{border-bottom:1px solid var(--line);padding:18px 0}
+    summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;font-weight:800;font-size:16px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-size:22px;line-height:1;font-weight:400}
+    details[open] summary:after{content:"−"}
+    details p{color:var(--muted);font-size:14px;margin:13px 30px 0 0;max-width:680px}
+    .contact-grid{display:grid;gap:24px}
+    .contact-info{display:grid;gap:16px}
+    .contact-block{padding-bottom:15px;border-bottom:1px solid var(--line)}
+    .contact-block small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:var(--muted);margin-bottom:5px}
+    .contact-block strong{font-size:16px}
+    .map-frame{min-height:300px;background:#d7dfd7;position:relative;overflow:hidden}
+    .map-frame iframe{border:0;width:100%;height:100%;min-height:300px;position:absolute;inset:0;filter:grayscale(.2)}
+    .map-fallback{padding:20px;position:absolute;bottom:12px;left:12px;background:var(--cream);font-size:13px;font-weight:700}
+    footer{background:#14271e;color:var(--cream);padding:26px 0}
+    .footer-row{display:flex;flex-direction:column;gap:15px}
+    .footer-row p{font-size:12px;color:#c5d0c6;margin:0}
+    .footer-links{display:flex;flex-wrap:wrap;gap:16px;font-size:12px}
+    .privacy{padding:50px 0;display:none}
+    .privacy:target{display:block}
+    .privacy h2{font-size:30px}
+    .privacy p{font-size:14px;max-width:800px}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .js .split-line span{display:inline-block;transform:translateY(110%);animation:rise .75s cubic-bezier(.2,.7,.2,1) forwards}
+    .js .split-line:nth-child(2) span{animation-delay:.12s}
+    @keyframes rise{to{transform:translateY(0)}}
+    @media(min-width:640px){
+      .wrap{width:min(1180px,calc(100% - 64px))}
+      .hero{padding:44px 0 72px}
+      .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:34px}
+      .hero-visual{min-height:490px}
+      .hero-actions{flex-direction:row;align-items:center}
+      .btn{padding-inline:20px}
+      .section-head{grid-template-columns:1fr .8fr;align-items:end}
+      .menu-layout{display:grid;grid-template-columns:1fr .72fr;gap:34px;align-items:start}
+      .menu-photo{height:100%;min-height:440px;margin:0}
+      .feature-grid{grid-template-columns:repeat(2,1fr)}
+      .ratings-grid{grid-template-columns:1fr 1fr}
+      .pain-grid{grid-template-columns:repeat(2,1fr)}
+      .booking-grid{grid-template-columns:1fr .8fr;align-items:start}
+      .form-panel{padding:30px}
+      .contact-grid{grid-template-columns:.7fr 1.3fr;align-items:stretch}
+      .map-frame,.map-frame iframe{min-height:380px}
+      .footer-row{flex-direction:row;justify-content:space-between;align-items:center}
+    }
+    @media(min-width:900px){
+      .nav-links{display:flex}
+      .nav-cta{padding-inline:18px}
+      .hero-grid{gap:60px}
+      h1{font-size:clamp(4rem,6.5vw,6.2rem)}
+      .hero-visual{min-height:560px}
+      section{padding:92px 0}
+      .feature-grid{grid-template-columns:repeat(4,1fr)}
+      .feature{min-height:230px;padding:25px}
+      .pain-grid{grid-template-columns:repeat(3,1fr)}
+      .ratings-grid{grid-template-columns:.85fr 1fr 1fr}
+      .rating-note,.quote{min-height:250px}
+      .booking-grid{gap:90px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+      .reveal{opacity:1;transform:none}
+      .js .split-line span{transform:none;animation:none}
+    }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Sea Breeze Coffee — на главную">
+      <span class="brand-mark" aria-hidden="true">SB</span>
+      <span class="brand-name">SEA BREEZE<small>COFFEE · VLADIVOSTOK</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#menu">Меню</a><a href="#about">О нас</a><a href="#how">Как забронировать</a><a href="#contacts">Контакты</a>
+    </nav>
+    <a class="nav-cta" href="#booking">Забронировать место</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-content">
+        <div class="eyebrow">Кофейня у воды · Владивосток</div>
+        <h1><span class="split-line"><span>Море.</span></span><span class="split-line"><span>Кофе.</span></span><span class="split-line"><span>Твой ритм.</span></span></h1>
+        <p class="hero-copy">Спешелти-кофе собственной обжарки, тёплая выпечка и места у окна с видом на море. Для рабочих пауз, долгих разговоров и тихих утр.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#booking">Забронировать бесплатно <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-secondary" href="#menu">Посмотреть меню</a>
+        </div>
+        <p class="fineprint">Бронь без предоплаты · Оплата на месте</p>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=85" alt="Уютный интерьер кофейни с деревянными столами и мягким дневным светом" fetchpriority="high">
+        <div class="hero-stamp">SLOW<br>MORNING<br>CLUB</div>
+        <div class="image-label"><span>Ваше место у окна</span>Кофе с видом на море</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-label="Особенности кофейни"><div class="wrap ticker-inner"><span>Свежая обжарка</span><span>Вид на море</span><span>Wi-Fi для работы</span><span>Овсяное молоко</span></div></div>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><div class="eyebrow">Меню и цены</div><h2>Хороший вкус — без сюрпризов.</h2></div>
+        <p>Выбирайте знакомую классику или попробуйте что-то с морским характером. Зерно обжариваем каждый день небольшими партиями.</p>
+      </div>
+      <div class="menu-layout">
+        <div class="menu-grid reveal">
+          <article class="menu-item"><div><h3>Фильтр / пуровер</h3><p>Чистый вкус зерна, сезонные лоты и спокойное послевкусие.</p></div><div class="price">[ЗАМЕНИТЬ] ₽</div></article>
+          <article class="menu-item"><div><h3>Латте с морской солью</h3><p>Мягкая молочная текстура и деликатный солоноватый акцент.</p></div><div class="price">[ЗАМЕНИТЬ] ₽</div></article>
+          <article class="menu-item"><div><h3>Капучино</h3><p>Сбалансированный эспрессо и бархатная молочная пена.</p></div><div class="price">[ЗАМЕНИТЬ] ₽</div></article>
+          <article class="menu-item"><div><h3>Овсяное молоко</h3><p>Растительная альтернатива для любимого напитка.</p></div><div class="price">[ЗАМЕНИТЬ] ₽</div></article>
+          <article class="menu-item"><div><h3>Свежая выпечка дня</h3><p>Русская выпечка к кофе — ассортимент меняется ежедневно.</p></div><div class="price">[ЗАМЕНИТЬ] ₽</div></article>
+          <p class="fineprint">Средний чек: [ЗАМЕНИТЬ] ₽ · Студентам скидка [ЗАМЕНИТЬ]%</p>
+        </div>
+        <div class="menu-photo reveal">
+          <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=85" alt="Чашки кофе и барная стойка в кофейне">
+          <div class="photo-note">Свежее зерно. Каждый день.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><div class="eyebrow">Почему Sea Breeze</div><h2>Место, в котором легко остаться.</h2></div>
+        <p>Не просто точка для кофе на вынос. Пространство, где можно выдохнуть, поработать и смотреть, как меняется море.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature reveal"><span class="feature-number">01 / LOCATION</span><h3>Окно на море</h3><p>Выбирайте место у окна и наблюдайте за набережной, не отвлекаясь от разговора или книги.</p></article>
+        <article class="feature reveal"><span class="feature-number">02 / FRESH ROAST</span><h3>Своя обжарка</h3><p>Обжариваем зерно ежедневно, чтобы раскрывать вкус чашки, а не маскировать его сиропами.</p></article>
+        <article class="feature reveal"><span class="feature-number">03 / WORK MODE</span><h3>Работать удобно</h3><p>Бесплатный быстрый Wi-Fi и розетки рядом с местами для ноутбука.</p></article>
+        <article class="feature reveal"><span class="feature-number">04 / YOUR CHOICE</span><h3>Цена понятна заранее</h3><p>Цены в меню без загадок, есть овсяное молоко и скидка для студентов.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><div class="eyebrow">Доверие и отзывы</div><h2>Пусть говорят гости.</h2></div>
+        <p>Здесь будут реальные оценки и впечатления посетителей. Замените поля ниже подтверждёнными данными перед публикацией.</p>
+      </div>
+      <div class="ratings-grid">
+        <div class="rating-note reveal"><div><span class="eyebrow">Оценка гостей</span><strong>[ЗАМЕНИТЬ]</strong></div><p>Средний рейтинг на <span>[ЗАМЕНИТЬ: площадка]</span></p></div>
+        <article class="quote reveal"><blockquote>«[ЗАМЕНИТЬ: добавьте короткий реальный отзыв о кофе, атмосфере или виде из окна.]»</blockquote><cite>— [ЗАМЕНИТЬ: имя гостя / источник]</cite></article>
+        <article class="quote reveal"><blockquote>«[ЗАМЕНИТЬ: добавьте второй отзыв, подтверждённый гостем.]»</blockquote><cite>— [ЗАМЕНИТЬ: имя гостя / источник]</cite></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><div class="eyebrow">Знакомые проблемы?</div><h2>Мы подумали о мелочах.</h2></div>
+        <p>Хорошая кофейня должна помогать переключиться, а не добавлять поводов для раздражения.</p>
+      </div>
+      <div class="pain-grid">
+        <article class="pain reveal"><h3>«Хочу поработать, а вокруг шумно»</h3><p>Нужно место, где можно сосредоточиться.</p><span class="answer">→ Выбирайте столик заранее и приходите в удобное время.</span></article>
+        <article class="pain reveal"><h3>«Вкус кофе каждый раз разный»</h3><p>Не хочется гадать, что окажется в чашке.</p><span class="answer">→ Свежая обжарка и внимание к способу приготовления.</span></article>
+        <article class="pain reveal"><h3>«Не знаю, сколько в итоге заплачу»</h3><p>Доплаты портят даже хороший кофе.</p><span class="answer">→ Смотрите цены в меню до заказа; платите в кофейне.</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><div class="eyebrow">Как это работает</div><h2>Три шага до своего столика.</h2></div>
+        <p>Бронируйте место у окна или записывайтесь на кофейную дегустацию — без предоплаты.</p>
+      </div>
+      <div class="steps">
+        <article class="step reveal"><span class="step-no">01</span><div><h3>Выберите повод</h3><p>Место с видом на море, рабочий визит или дегустация кофе.</p></div></article>
+        <article class="step reveal"><span class="step-no">02</span><div><h3>Оставьте контакты</h3><p>Укажите имя, телефон и подходящий вариант в форме ниже.</p></div></article>
+        <article class="step reveal"><span class="step-no">03</span><div><h3>Подтвердите бронь</h3><p>Мы свяжемся с вами, уточним детали — оплата будет на месте.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <div class="wrap booking-grid">
+      <div class="reveal">
+        <div class="eyebrow">Ваш кофе у моря</div>
+        <h2>Забронируйте вид.<br>Кофе — на месте.</h2>
+        <p class="booking-copy">Оставьте заявку на столик у окна или ближайшую дегустацию. Бронирование бесплатное и не требует предоплаты.</p>
+        <div class="booking-benefits"><span>Без предоплаты</span><span>Ответ по контактам</span><span>Окно на море</span></div>
+      </div>
+      <form class="form-panel reveal" id="booking-form">
+        <h3>Оставить заявку</h3>
+        <p>Заполните форму — мы свяжемся с вами для подтверждения.</p>
+        <div class="field"><label for="name">Ваше имя</label><input id="name" name="name" autocomplete="name" placeholder="Как к вам обращаться" required></div>
+        <div class="field"><label for="phone">Номер телефона</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 ___ ___-__-__" inputmode="tel" required></div>
+        <div class="field"><label for="service">Что хотите забронировать?</label><select id="service" name="service" required><option value="" disabled selected>Выберите вариант</option><option>Столик у окна с видом на море</option><option>Место для работы</option><option>Кофейная дегустация</option></select></div>
+        <label class="consent"><input type="checkbox" name="consent" required><span>Я согласен(на) на обработку персональных данных и ознакомился(лась) с <a href="#privacy">политикой конфиденциальности</a>.</span></label>
+        <button class="btn btn-primary" type="submit">Отправить заявку <span aria-hidden="true">↗</span></button>
+        <div class="form-message" id="form-message" role="status" aria-live="polite">Спасибо! Ваша заявка подготовлена. Чтобы получать бронирования, подключите форму к сервису обработки заявок.</div>
+        <p class="fineprint" style="margin:13px 0 0">Оплата — в кофейне. Отправка формы на этой демоверсии не передаёт данные на сервер.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><div class="eyebrow">FAQ</div><h2>Перед первым визитом.</h2></div>
+        <p>Коротко ответили на вопросы, которые помогают спланировать визит.</p>
+      </div>
+      <div class="faq-list reveal">
+        <details><summary>Нужно ли платить за бронирование?</summary><p>Нет. Вы бронируете бесплатно, а заказ оплачиваете непосредственно в кофейне.</p></details>
+        <details><summary>Можно ли прийти с ноутбуком?</summary><p>Да. В кофейне предусмотрены бесплатный высокоскоростной Wi-Fi и розетки. Если важна тишина, заранее выберите время визита.</p></details>
+        <details><summary>Есть ли напитки на растительном молоке?</summary><p>Да, можно выбрать овсяное молоко. Уточните доступные варианты у бариста при заказе.</p></details>
+        <details><summary>Как записаться на дегустацию?</summary><p>Выберите «Кофейная дегустация» в форме заявки. Мы свяжемся с вами и сообщим доступные даты.</p></details>
+        <details><summary>Где посмотреть актуальные цены?</summary><p>Цены будут указаны в разделе меню. Перед публикацией замените все поля [ЗАМЕНИТЬ] на актуальные значения.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div><div class="eyebrow">Контакты и адрес</div><h2>Встретимся у воды.</h2></div>
+        <p>Загляните за чашкой кофе или забронируйте столик заранее, чтобы занять место у окна.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-block"><small>Адрес</small><strong>Центр Владивостока, рядом с набережной</strong><p class="fineprint">[ЗАМЕНИТЬ: точный адрес]</p></div>
+          <div class="contact-block"><small>Часы работы</small><strong>[ЗАМЕНИТЬ: график работы]</strong></div>
+          <div class="contact-block"><small>Телефон</small><strong>[ЗАМЕНИТЬ: номер телефона]</strong></div>
+          <div class="contact-block"><small>Социальные сети</small><strong>[ЗАМЕНИТЬ: ссылки на соцсети]</strong></div>
+          <a class="btn btn-primary" href="#booking">Забронировать столик</a>
+        </div>
+        <div class="map-frame reveal">
+          <iframe title="Карта центра Владивостока" src="https://www.openstreetmap.org/export/embed.html?bbox=131.88%2C43.10%2C131.93%2C43.13&layer=mapnik" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Карта района центра Владивостока"></iframe>
+          <a class="map-fallback" href="https://www.openstreetmap.org/#map=14/43.115/131.905" target="_blank" rel="noopener noreferrer">Открыть карту Владивостока ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="privacy" id="privacy">
+    <div class="wrap">
+      <div class="eyebrow">Документы</div><h2>Политика конфиденциальности</h2>
+      <p><strong>Шаблон для заполнения перед публикацией.</strong> Укажите сведения об операторе персональных данных, цели и правовые основания обработки, перечень обрабатываемых данных, сроки хранения, порядок отзыва согласия и контакт для обращений. Опишите сервис, который будет принимать заявки с сайта.</p>
+      <p>Эта демоверсия не отправляет данные формы на сервер и не сохраняет их. Не публикуйте сайт для сбора реальных заявок, пока не заполните политику и не подключите безопасный способ обработки данных.</p>
+      <p><a href="#booking">Вернуться к форме бронирования ↑</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">SB</span><span class="brand-name">SEA BREEZE<small>COFFEE · VLADIVOSTOK</small></span></a>
+    <p>Кофе, море и немного времени для себя.</p>
+    <div class="footer-links"><a href="#privacy">Политика конфиденциальности</a><a href="#top">Наверх ↑</a></div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal: отключается автоматически при prefers-reduced-motion.
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealItems = document.querySelectorAll('.reveal');
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    revealItems.forEach(item => observer.observe(item));
+  } else {
+    revealItems.forEach(item => item.classList.add('visible'));
+  }
+
+  // Demo form: validates required fields and shows confirmation without transmitting personal data.
+  const form = document.getElementById('booking-form');
+  const message = document.getElementById('form-message');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    message.classList.add('show');
+    message.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest'});
+    form.reset();
+  });
+</script>
+</body>
+</html>
